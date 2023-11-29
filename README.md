@@ -9,8 +9,7 @@
 
 ## Instruction
 - First mong buhaton kay mag install ka ug [composer](https://getcomposer.org/)
-![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20211117102854/2.png)
-<br/>
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20211117102854/2.png)<br/>
 Click mo lang ang download then next
 ![alt text](https://www.testingdocs.com/wp-content/uploads/Composer-Install-Windows.png)
 <br/>
