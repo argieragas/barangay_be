@@ -9,7 +9,7 @@
 
 ## Instruction
 - First mong buhaton kay mag install ka ug [composer](https://getcomposer.org/)
-![alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fphp.tutorials24x7.com%2Fblog%2Fhow-to-install-composer-on-windows&psig=AOvVaw0dHKAnTQTAYafttnNjgCCR&ust=1701372900587000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjPiY366YIDFQAAAAAdAAAAABAE)
+(https://media.geeksforgeeks.org/wp-content/uploads/20211117102854/2.png)
 then pag human nimo ug install eopen ang terminal nga naka direct sa address ng project
 
 ## About Laravel
