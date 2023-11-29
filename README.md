@@ -7,6 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Instruction
+- First mong buhaton kay mag install ka ug [composer](https://getcomposer.org/)
+![alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fphp.tutorials24x7.com%2Fblog%2Fhow-to-install-composer-on-windows&psig=AOvVaw0dHKAnTQTAYafttnNjgCCR&ust=1701372900587000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjPiY366YIDFQAAAAAdAAAAABAE)
+then pag human nimo ug install eopen ang terminal nga naka direct sa address ng project
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
