@@ -41,7 +41,7 @@ class ReportController extends Controller
 
 
     public function getLocationReport(){
-        $location = DB::table('report')->select('latlng')->get();
+        $location = DB::table('report')->get();
         $array = array();
         foreach($location as $loc){
             $str = explode(',',$loc->latlng);
@@ -49,7 +49,35 @@ class ReportController extends Controller
                 'lat' => $str[0],
                 'lng' => $str[1],
                 'icon' => 'assets/img/map-marker-red.png',
-                'label'=> 'Report'
+                'label' => 'Report',
+                'content' => "<div style='
+                text-align: center;
+                font-size: 17px;
+                width: 100%;
+                border-bottom: 1px solid #ebebeb;
+                font-weight: 550;
+                margin-bottom: 4px'>
+                    <label>REPORT</label>
+                </div>
+
+                <table>
+                <tr>
+                    <th style='width: 80px; font-size: 14px'>Incident : </th>
+                    <td>$loc->incident</td>
+                </tr>
+                <tr>
+                    <th style='padding-top: 4px; width: 80px; font-size: 14px'>Involved : </th>
+                    <td style='padding-top: 4px;'>$loc->involved</td>
+                </tr>
+                <tr>
+                    <th style='padding-top: 4px; width: 80px; font-size: 14px'>Date : </th>
+                    <td style='padding-top: 4px;'>$loc->date</td>
+                </tr>
+                <tr>
+                    <th style='padding-top: 4px; width: 80px; font-size: 14px'>Location : </th>
+                    <td style='padding-top: 4px;'>$loc->location</td>
+                </tr>
+                </table>"
             ]);
         }
         return response()->json($array);

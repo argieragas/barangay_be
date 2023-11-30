@@ -42,6 +42,7 @@ class MainController extends Controller{
             'status'=>$request->input('status'),
             'remark'=>$request->input('remark'),
             'location'=>$request->input('location'),
+            'locationLatLng'=>$request->input('locationLatLng'),
             'details'=>$request->input('details')
         ]);
         return response()->json(['title'=>'success', 'message'=>'Success to add new case']);
@@ -67,10 +68,53 @@ class MainController extends Controller{
                 'status'=>$request->input('status'),
                 'remark'=>$request->input('remark'),
                 'location'=>$request->input('location'),
+                'locationLatLng'=>$request->input('locationLatLng'),
                 'details'=>$request->input('details')
             ]);
 
         return response()->json(['title'=>'success', 'message'=>'Success to update the case']);
+    }
+
+    public function getLocationCase(){
+        $location = DB::table('case')->get();
+        $array = array();
+        foreach($location as $loc){
+            $str = explode(',',$loc->locationLatLng);
+            array_push($array, [
+                'lat' => $str[0],
+                'lng' => $str[1],
+                'icon' => 'assets/img/map-marker-cyan.png',
+                'label' => 'Case',
+                'content' => "<div style='
+                text-align: center;
+                font-size: 17px;
+                width: 100%;
+                border-bottom: 1px solid #ebebeb;
+                font-weight: 550;
+                margin-bottom: 4px'>
+                    <label>CASE</label>
+                </div>
+                <table>
+                <tr>
+                    <th style='width: 80px; font-size: 14px'>Title : </th>
+                    <td>$loc->title</td>
+                </tr>
+                <tr>
+                    <th style='padding-top: 4px; width: 80px; font-size: 14px'>Type : </th>
+                    <td style='padding-top: 4px;'>$loc->type</td>
+                </tr>
+                <tr>
+                    <th style='padding-top: 4px; width: 80px; font-size: 14px'>Details : </th>
+                    <td style='padding-top: 4px;'>$loc->details</td>
+                </tr>
+                <tr>
+                    <th style='padding-top: 4px; width: 80px; font-size: 14px'>Location : </th>
+                    <td style='padding-top: 4px;'>$loc->location</td>
+                </tr>
+                </table>"
+            ]);
+        }
+        return response()->json($array);
     }
 
     public function deleteCase($id){

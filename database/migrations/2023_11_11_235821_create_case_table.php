@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('status');
             $table->longText('remark');
             $table->longText('location');
+            $table->string('locationLatLng');
             $table->longText('details');
             $table->timestamps();
         });
