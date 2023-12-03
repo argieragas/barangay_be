@@ -27,13 +27,6 @@ class Controller extends BaseController
     }
 
     public function store(Request $request){
-        // $user = new User;
-        // $user->name = 'Black Widow';
-        // $user->address = 'United State';
-        // $user->position = 'Admin';
-        // $user->committee = 'Admin';
-        // $user->email = 'blackwidow@gmail.com';
-        // $user->password = Hash::make('blackwidow');
         $user = new User([
             'name'=> 'Black Widow',
             'address'=> 'United State',
@@ -60,10 +53,6 @@ class Controller extends BaseController
         return response()->json($reports);
     }
 
-    public function getCase(){
-        $case = DB::table('case')->get();
-        return response()->json($case);
-    }
 
     public function getLocation(){
         $location = DB::table('case')->select('location')->get();

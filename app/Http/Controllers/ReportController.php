@@ -36,7 +36,7 @@ class ReportController extends Controller
                 'latlng'=>$request->input('latlng'),
                 'date'=>$request->input('date')
             ]);
-            return response()->json(['title'=>'success', 'message'=>'Success to update the report']);
+        return response()->json(['title'=>'success', 'message'=>'Success to update the report']);
     }
 
 
