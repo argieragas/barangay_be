@@ -37,6 +37,6 @@ Route::delete('deleteCase/{id}', [CaseController::class, 'deleteCase']);
 Route::post('updateReport', [ReportController::class, 'updateReport']);
 Route::get('getLocationReport', [ReportController::class, 'getLocationReport']);
 Route::get('getLocationCase', [CaseController::class, 'getLocationCase']);
-Route::get('getCountCase', [MainController::class, 'getCountCase']);
-Route::get('getCountReport', [MainController::class, 'getCountReport']);
+Route::get('getCount', [MainController::class, 'getCount']);
+Route::get('getDashboard', [MainController::class, 'getDashboard']);
 Route::get('getUser', [Controller::class, 'getUser']);

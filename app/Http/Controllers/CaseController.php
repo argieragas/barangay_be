@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class CaseController extends Controller
 {
@@ -27,7 +28,8 @@ class CaseController extends Controller
             'remark'=>$request->input('remark'),
             'location'=>$request->input('location'),
             'locationLatLng'=>$request->input('locationLatLng'),
-            'details'=>$request->input('details')
+            'details'=>$request->input('details'),
+            'created_at'=>Carbon::now()
         ]);
         return response()->json(['title'=>'success', 'message'=>'Success to add new case']);
     }
