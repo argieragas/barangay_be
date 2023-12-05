@@ -19,7 +19,9 @@ class MainController extends Controller{
             'email'=>$request->input('email'),
             'password'=>Hash::make($request->input('password'))
         ]);
-        return response()->json(['title'=>'success', 'message'=>'Success to register']);
+
+        $user = DB::table('users')->where('email',$request->input('email'));
+        return response()->json(['success' => $success, 'user' => $user]);
     }
 
     public function getCount(){
