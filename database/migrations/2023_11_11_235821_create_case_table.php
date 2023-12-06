@@ -31,6 +31,7 @@ return new class extends Migration
             $table->longText('location');
             $table->string('locationLatLng');
             $table->longText('details');
+            $table->string('date_created');
             $table->timestamps();
         });
     }

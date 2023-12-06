@@ -29,7 +29,7 @@ class CaseController extends Controller
             'location'=>$request->input('location'),
             'locationLatLng'=>$request->input('locationLatLng'),
             'details'=>$request->input('details'),
-            'created_at'=>Carbon::now()
+            'date_created'=>date('m/d/Y')
         ]);
         return response()->json(['title'=>'success', 'message'=>'Success to add new case']);
     }

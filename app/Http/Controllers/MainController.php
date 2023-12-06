@@ -35,7 +35,7 @@ class MainController extends Controller{
         $year = date("Y");
         $array = array();
         for($i = 2000; $i <= $year ;$i++){
-            $case = DB::table('case')->where('created_at', 'like', '%'.$i.'%')->get();
+            $case = DB::table('case')->where('date_created', 'like', '%'.$i.'%')->get();
             $report = DB::table('report')->where('date', 'like', '%'.$i.'%')->get();
             if($case->count() > 0 || $report->count() > 0){
                 array_push($array,['year'=>$i, 'case' => $case->count(), 'report' => $report->count()]);

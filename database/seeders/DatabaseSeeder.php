@@ -23,5 +23,14 @@ class DatabaseSeeder extends Seeder
             'address' => 'Purok. Malinawon 2, Brgy. Matiao, Mati City',
             'password' => Hash::make('johndoe')
         ]);
+        
+        \App\Models\User::factory()->create([
+            'name' => 'superAdmin',
+            'email' => 'superadmin@gmail.com',
+            'position' => 'SuperAdmin',
+            'committee' => 'SuperAdmin',
+            'address' => 'Purok. Malinawon 2, Brgy. Matiao, Mati City',
+            'password' => Hash::make('superadmin')
+        ]);
     }
 }
