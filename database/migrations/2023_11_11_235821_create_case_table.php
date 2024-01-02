@@ -13,24 +13,22 @@ return new class extends Migration
     {
         Schema::create('case', function (Blueprint $table) {
             $table->id();
+            $table->string('case_number');
+            $table->smallInteger('reference');
+            $table->string('date_of_filing');
+            $table->string('official_receipt');
+            $table->string('complainant');
+            $table->string('respondent');
             $table->string('title');
-            $table->string('type');
-            $table->string('complainantfName');
-            $table->string('complainantmName');
-            $table->string('complainantlName');
-            $table->longText('complainantAddress');
-            $table->string('complainantLatLng');
-            $table->string('complaintfName');
-            $table->string('complaintmName');
-            $table->string('complaintlName');
-            $table->longText('complaintAddress');
-            $table->string('complaintLatLng');
-            $table->string('schedule');
-            $table->string('status');
-            $table->longText('remark');
+            $table->string('nature');
+            $table->string('date_summons');
+            $table->string('first_hearing');
+            $table->string('final_hearing');
+            $table->string('action');
+            $table->string('execution');
+            $table->string('remark');
             $table->longText('location');
             $table->string('locationLatLng');
-            $table->longText('details');
             $table->string('date_created');
             $table->timestamps();
         });
