@@ -16,11 +16,11 @@ return new class extends Migration
             $table->string('criminal');
             $table->string('civil');
             $table->string('others');
-            $table->string('total');
+            $table->double('total');
             $table->string('mediated');
             $table->string('conciliated');
             $table->string('arbitrated');
-            $table->double('total');
+            $table->double('settled_total');
             $table->string('repudiated');
             $table->string('dismissed');
             $table->string('certified');
@@ -36,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('annual');
     }
 };

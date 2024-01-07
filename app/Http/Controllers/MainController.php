@@ -21,7 +21,7 @@ class MainController extends Controller{
         ]);
 
         $user = DB::table('users')->where('email',$request->input('email'));
-        return response()->json(['success' => $success, 'user' => $user]);
+        return response()->json(['user' => $user]);
     }
 
     public function getCount(){

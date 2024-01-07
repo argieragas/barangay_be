@@ -49,7 +49,7 @@ class Controller extends BaseController
     }
 
     public function getReport(){
-        $reports = DB::table('report')->get();
+        $reports = DB::table('case')->get();
         return response()->json($reports);
     }
 
